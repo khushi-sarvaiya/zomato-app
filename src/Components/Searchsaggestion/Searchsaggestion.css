@@ -1,0 +1,49 @@
+.search-suggestion-container {
+  width: 533px;
+  height: 265px;
+  overflow-x: hidden;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 16rem;
+  margin-top: 0.3rem;
+  padding: 15px 0 15px 0;
+  border: 1px solid gray;
+}
+/* .search-suggestion-container .suggestion-container:hover {
+  background-color: rgb(233, 240, 240);
+} */
+.suggestion-container {
+  padding: 1px;
+}
+
+.suggest-items {
+  height: 75px;
+  margin: 15px;
+  color: black;
+  display: flex;
+  border-radius: 10px;
+}
+
+.food-images {
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
+}
+.short-desc {
+  width: 441px;
+
+  margin-left: 15px;
+}
+
+.food-type {
+  color: gray;
+}
+.no-items-found {
+  color:red;
+
+  padding: 0 0 0 16px;
+
+
+ 
+ 
+}
