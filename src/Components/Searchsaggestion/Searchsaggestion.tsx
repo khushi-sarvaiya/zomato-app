@@ -6,11 +6,8 @@ import { useNavigate } from "react-router-dom";
 const Searchsaggestion = (props:any) => {
 const navigate = useNavigate();
 
-  // console.log("maping suggestionList========>",props.suggestions);
   const onClickFoodItems=()=>{
     navigate("/Fooditems");
-   
-
   }
 
   return (
