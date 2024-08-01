@@ -42,10 +42,9 @@ const Searchbar = () => {
           <i className="fa-solid fa-location-dot location-color"></i>
         </span>
         <Input type="text" className="text-location" placeholder="location" />
+       <span><i className="fa-solid fa-caret-down dropdown">  </i></span>
         <div className="vertical-line" />
-
         <span className="material-symbols-outlined search-gray">search</span>
-
         <Input
           type="text"
           className=" text-search"

@@ -1,14 +1,10 @@
 .header-container {
-    /* margin: 0 12% 0% 12%; */
-    /* padding-top: 20px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    gap: 15px;
-    font-weight: 400;
-    font-size: 18px;
-    /* background-color: aliceblue; */
-    
-   
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: aliceblue;
+}

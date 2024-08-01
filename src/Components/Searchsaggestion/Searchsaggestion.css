@@ -7,13 +7,9 @@
   margin-left: 16rem;
   margin-top: 0.3rem;
   padding: 15px 0 15px 0;
-  border: 1px solid gray;
+  border: 1px solid red;
 }
 
-.search-suggestion-container .suggestion-container:hover{
-  background-color: burlywood
-
-}
 .suggestion-container {
   padding: 1px;
 }
@@ -33,7 +29,6 @@
 }
 .short-desc {
   width: 441px;
-
   margin-left: 15px;
 }
 
@@ -41,7 +36,13 @@
   color: gray;
 }
 .no-items-found {
-  color: red;
+  color: gray;
+  padding-left: 20px;
+}
 
-  padding: 0 0 0 16px;
+.dropdown {
+  color: gray;
+  width: 20px;
+  padding: 3px;
+
 }

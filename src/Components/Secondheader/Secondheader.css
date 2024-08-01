@@ -1,0 +1,23 @@
+.center-conainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-component {
+    margin-left: 10px;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .searchbar-component {
+    padding: 0 20px 0 20px;
+  }
+  .margin-leftheader {
+    margin: 0 0 0 80px;
+    padding-right: 20px;
+    font-size: larger;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+  }
