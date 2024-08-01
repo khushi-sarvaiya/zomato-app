@@ -3,19 +3,20 @@ import "./Searchsaggestion.css";
 import { useNavigate } from "react-router-dom";
 
 
-const Searchsaggestion = (props:any) => {
+const Searchsaggestion = ({suggestions}:any) => {
 const navigate = useNavigate();
 
+// console.log("suggestions====>",props.suggestions)
   const onClickFoodItems=()=>{
-    navigate("/Fooditems");
+    navigate("/foodItems");
   }
 
   return (
     <div>
       <div className="search-suggestion-container">
         <div className="suggestion-container">
-          {props.suggestions.length > 0 ? (
-            props.suggestions.map((items:any) => (
+          {suggestions.length > 0 ? (
+            suggestions.map((items:any) => (
               <div className="suggest-items" onClick={onClickFoodItems}>
                 <div>
                   <img
@@ -24,9 +25,9 @@ const navigate = useNavigate();
                   ></img>
                 </div>
                 <div className="short-desc">
-                  <div className=""> {items} - Delivery</div>
+                  <div className=""> {items.restaurantName} - Delivery</div>
                   <div className="food-type">Dish</div>
-                  <div></div>
+                
                 </div>
               </div>
             ))

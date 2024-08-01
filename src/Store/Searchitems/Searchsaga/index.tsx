@@ -7,12 +7,9 @@ export function* searchDataSaga(action: any): any {
   try {
     console.log("searchDataSaga=====>",action);
     
-    const response:any = yield call(Searchapi, {
-      search: action.payload.searchdata,
-
-    });    
+    const response:any = yield call(Searchapi,action.payload);    
     yield put(searchItemsSuccess(response.data));
-  
+  console.log("searchItemsSuccess====>",response)
     
   } catch (error: any) {
     yield put(searchItemsFailure(error.meassge));

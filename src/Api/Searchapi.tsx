@@ -1,14 +1,9 @@
 import React from "react";
 import axios from "axios";
 
-const Searchapi = (params:any) => {
-  const respone= axios.post("http://192.168.1.22:5500/search", {params},
-    {
-      headers: {"content-Type": "application/json"},
-    }
-  );
-  console.log("respone",respone);
-  return respone
+const Searchapi = (search: any) => {
+  console.log("params", search);
+  return axios.post("http://192.168.1.32:5500/search", { search });
 };
 
 export default Searchapi;

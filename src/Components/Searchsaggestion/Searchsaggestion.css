@@ -1,7 +1,7 @@
 .search-suggestion-container {
   width: 533px;
-  height: 265px;
-  overflow-x: hidden;
+  max-height: 265px;
+  overflow-x: auto;
   background-color: white;
   border-radius: 10px;
   margin-left: 16rem;
@@ -9,9 +9,11 @@
   padding: 15px 0 15px 0;
   border: 1px solid gray;
 }
-/* .search-suggestion-container .suggestion-container:hover {
-  background-color: rgb(233, 240, 240);
-} */
+
+.search-suggestion-container .suggestion-container:hover{
+  background-color: burlywood
+
+}
 .suggestion-container {
   padding: 1px;
 }
@@ -39,11 +41,7 @@
   color: gray;
 }
 .no-items-found {
-  color:red;
+  color: red;
 
   padding: 0 0 0 16px;
-
-
- 
- 
 }

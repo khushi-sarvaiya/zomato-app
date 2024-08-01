@@ -7,14 +7,15 @@ import { fooditems_request } from "../../Store/FoodItems/Action";
 
 const Fooditems = () => {
   const [filter, setFilter] = useState("All");
-  const dispetch = useDispatch();
+  const dispatch = useDispatch();
   let foodItemsAll = useSelector(
     (state: any) => state.foodItemsReducer.fooddata
   );
 
+  
   useEffect(() => {
-    dispetch(fooditems_request());
-  }, [dispetch]);
+    dispatch(fooditems_request());
+  }, [dispatch]);
 
   const filtering = () => {
     if (filter === "Rating") {
@@ -55,10 +56,12 @@ const Fooditems = () => {
         <div className="food-items-cross">
           <div>Pizza X</div>
         </div>
-        <div onClick={() => setFilter("Rating")}>rating</div>
-        <div onClick={() => setFilter("Veg")}>veg</div>
+        <div onClick={() => setFilter("Rating")}>Rating</div>
+        <div onClick={() => setFilter("Veg")}> Pure veg</div>
         
       </div>
+
+      <br/>
       <div className="location-description">Food Delivery Restaurants in Ahmedabad Jn, Kalupur Railway Station Rd, Sakar Bazzar</div>
       <br/>
       <div className="all-card-conatiner">

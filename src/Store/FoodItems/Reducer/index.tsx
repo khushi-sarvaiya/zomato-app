@@ -30,9 +30,8 @@ export const foodItemsReducer = (state = initialState, action: any) => {
         ...state,
         error: action.payload,
         fooddata: [],
+        foodFilterData:[]
       };
-      
-
     }
     default:
       return state;

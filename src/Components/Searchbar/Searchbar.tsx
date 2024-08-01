@@ -6,15 +6,33 @@ import { useDispatch, useSelector } from "react-redux";
 import { searchItemsRequest } from "../../Store/Searchitems/Action";
 const Searchbar = () => {
   const [inputValue, setInputValue] = useState<any>();
-  const [suggestions, setSuggestions] = useState([]);
+  const [suggestions, setSuggestions] = useState<any>([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
   const dispatch = useDispatch();
-  const selector = useSelector((state: any) => state);
+  const selector = useSelector((state: any) => state.SearchReducer.searchData);
 
-
+  console.log("selector=====>", selector);
   const handleChange = (e: any) => {
-    setInputValue(e.target.value);
-    dispatch(searchItemsRequest(inputValue));
+    const value = e.target.value;
+    setInputValue(value);
+    if (value.trim().length > 0) {
+      const filterSuggestions = selector.filter(
+        (items: any) =>
+          items.restaurantName.toLowerCase().includes(value.toLowerCase()) ||
+          items.categories.some((categories: any) =>
+            categories.toLowerCase().includes(value.toLowerCase())
+          ) ||
+          items.items.some((items: any) =>
+            items.name.toLowerCase().includes(value.toLowerCase())
+          )
+      );
+      setShowSuggestion(true);
+      dispatch(searchItemsRequest(value));
+      setSuggestions(filterSuggestions);
+      console.log("filterSuggestions======>", filterSuggestions);
+    } else {
+      setShowSuggestion(false);
+    }
   };
 
   return (
@@ -23,12 +41,7 @@ const Searchbar = () => {
         <span>
           <i className="fa-solid fa-location-dot location-color"></i>
         </span>
-        <Input
-          type="text"
-          className="text-location"
-          placeholder="location"
-          onChange=""
-        />
+        <Input type="text" className="text-location" placeholder="location" />
         <div className="vertical-line" />
 
         <span className="material-symbols-outlined search-gray">search</span>
@@ -47,4 +60,3 @@ const Searchbar = () => {
 };
 
 export default Searchbar;
-
