@@ -9,12 +9,14 @@ export const fooditems_request = () => {
     type: FOODITEMS_REQUEST,
   };
 };
+
 export const fooditems_success = (fooddata_response: any) => {
   return {
     type: FOODITEMS_SUCCESS,
     payload: fooddata_response,
   };
 };
+
 export const fooditems_failure = (error: any) => {
   return {
     type: FOODITEMS_FAILURE,

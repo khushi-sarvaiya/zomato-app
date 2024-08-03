@@ -6,16 +6,16 @@ import Secondheader from "../../Components/Secondheader/Secondheader";
 import { fooditems_request } from "../../Store/FoodItems/Action";
 
 const Fooditems = () => {
-  const { id } = useParams<{id:any}>();
-  const dispatch=useDispatch();
+  const { id } = useParams<{ id: any }>();
+  const dispatch = useDispatch();
   const selector = useSelector((state: any) => state.foodItemsReducer.fooddata);
-  const filterdata = selector.filter((items: any, index: any) => items.id === parseInt(id))
+  const filterdata = selector.filter(
+    (items: any, index: any) => items.id === parseInt(id)
+  );
+
   useEffect(() => {
     dispatch(fooditems_request());
-       }, [ dispatch]);
-
-
-  console.log("filterdata=======>", filterdata);
+  }, [dispatch]);
 
   return (
     <div className="center-container">

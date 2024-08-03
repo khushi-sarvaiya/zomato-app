@@ -37,6 +37,8 @@ const Restaurant = () => {
   return (
     <div className="center-conainer">
       <Secondheader />
+  
+      <hr className="horizontal-line-restaurant" />
       <br />
       <div className="food-allfilter-container">
         <div onClick={() => setFilter("All")}>All</div>

@@ -1,13 +1,14 @@
 .search-suggestion-container {
-  width: 533px;
+  position: absolute;
+  width: 455px;
   max-height: 265px;
   overflow-x: auto;
   background-color: white;
   border-radius: 10px;
-  margin-left: 16rem;
+  margin-left: 18rem;
   margin-top: 0.3rem;
   padding: 15px 0 15px 0;
-  border: 1px solid red;
+  border:1px solid gainsboro;
 }
 
 .suggestion-container {
@@ -24,11 +25,11 @@
 
 .food-images {
   border-radius: 10px;
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
 }
 .short-desc {
-  width: 441px;
+  width: 321px;
   margin-left: 15px;
 }
 
@@ -44,5 +45,4 @@
   color: gray;
   width: 20px;
   padding: 3px;
-
 }

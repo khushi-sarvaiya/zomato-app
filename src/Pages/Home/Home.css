@@ -5,7 +5,6 @@
   font-family: sans-serif;
 }
 .static-header-container {
-  /* margin-top: 1%; */
   display: flex;
   justify-content:right;
   align-items: center;
@@ -22,20 +21,22 @@
   object-fit: contain;
   background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
 }
+
 .container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .center-title {
   margin-top: 10%;
   width: 300px;
   height: 60px;
 }
+
 .description {
   text-align: center;
   margin: 2rem;
   font-size: 2.5rem;
- 
 }

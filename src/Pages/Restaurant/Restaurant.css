@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+.horizontal-line-restaurant{
+  color:slategrey;  
+  width: 100%;
+}
+
 .location-description {
   align-self: center;
   width: 80%;
@@ -27,6 +32,7 @@
   color: gray;
   border: 1px solid gainsboro;
 }
+
 .food-items-cross {
   width: 60px;
   height: 25px;
@@ -42,33 +48,35 @@
   justify-content: center;
   gap: 40px;
 }
+
 .card-component {
   width: 328px;
   height: auto;
   padding: 10px 10px;
-
   border-radius: 20px;
-
   box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
 }
+
 .images {
   width: 328px;
   height: 12rem;
-
   border-radius: 20px;
 }
 
 .card-description {
   width: 328px;
 }
+
 .restanrentname {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
 }
+
 .restanrentname div {
   font-size: larger;
 }
+
 .restanrentname .ratting {
   color: gray;
   font-size: medium;

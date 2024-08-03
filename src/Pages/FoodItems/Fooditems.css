@@ -12,8 +12,7 @@
 }
 
 .horizontal-line {
-  color: gainsboro;
-  height: 1px;
+  color:slategrey;
 }
 
 .all-images-items {
@@ -77,11 +76,12 @@
   display: flex;
   justify-content: space-between;
 }
+
 .direction-bookmark-share{
     display:flex;
     gap: 10px;
-
 }
+
 .direction-bookmark-share > NavLink{
 padding:0 20px;
 background-color: white;
@@ -90,5 +90,4 @@ color :black;
 border-radius: 10px;
 font-size: medium;
 border:1px solid gray;
-
 }

@@ -16,10 +16,7 @@ const Searchsaggestion = ({ suggestions }: any) => {
             suggestions.map((items: any) => (
               <div className="suggest-items" onClick={onClickFoodItems}>
                 <div>
-                  <img
-                    src="https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg"
-                    className="food-images"
-                  ></img>
+                  <img src={items.image} className="food-images"></img>
                 </div>
                 <div className="short-desc">
                   <div className=""> {items.restaurantName} - Delivery</div>
