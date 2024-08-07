@@ -18,8 +18,8 @@ const Searchbar: React.FC = () => {
   const [showSuggestion, setShowSuggestion] = useState<boolean>(false);
   const dispatch = useDispatch();
   const selector = useSelector((state: any) => state.SearchReducer.searchData);
-  const [loader, setLoader] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(false);
+  const [loader, setLoader] = useState<boolean>(false);
+  const [activeDropdown, setActiveDropdown] = useState<boolean>(false);
 
   const currentLocation = (locationData: string) => {
     setLocation(locationData);
