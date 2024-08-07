@@ -1,8 +1,7 @@
 import React from "react";
 import "./Header.css";
 
-
-function Header() {
+ const Header:React.FC=()=> {
   return (
     <div>
       <div className="header-container">
@@ -14,3 +13,5 @@ function Header() {
 }
 
 export default Header;
+
+

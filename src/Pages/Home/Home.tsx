@@ -1,19 +1,17 @@
 import React from "react";
 import "./Home.css";
-import Header from "../../Components/Header/Header";
 import Searchbar from "../../Components/Searchbar/Searchbar";
 
-
-const Home = () => {
-  
-
+const Home:React.FC = () => {
   return (
     <div className="main-container">
       <div className="background">
-        <Header />
-
         <div className="container">
-          <div className="title-center">
+          <div className="static-header-container">
+            <div>Login</div>
+            <div>Logout</div>
+          </div>
+          <div>
             <img
               src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png"
               className="center-title"

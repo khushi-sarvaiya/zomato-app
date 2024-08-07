@@ -1,103 +1,93 @@
-.center-conainer {
+.center-container {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.fooditems-container {
+  margin-top: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header-component {
-  margin-left: 10px;
-  padding: 12px 0;
-  display: flex;
-  flex-direction: row;
-  /* justify-content: center; */
-  align-items: center;
-
-  /* width: 100%; */
-}
-.searchbar-component {
-  padding: 0 20px 0 20px;
-}
-.margin-leftheader {
-  margin: 0 0 0 80px;
-  padding-right: 20px;
-  font-size: larger;
-  color: gray;
-  font-family: Arial, Helvetica, sans-serif;
+.horizontal-line {
+  color:slategrey;
 }
 
-.location-description {
-  align-self: center;
-  width: 80%;
-  font-family: sans-serif;
-  font-size: 2rem;
-}
-.food-allfilter-container {
+.all-images-items {
   width: 82%;
+  height: 50vh;
   display: flex;
-  flex-direction: row;
-  /* align-self: start; */
-  gap: 20px;
+  gap: 8px;
+  height: 20rem;
 }
 
-.food-allfilter-container > div {
-  width: 70px;
-  height: 25px;
-  padding: 8px;
-  border-radius: 10px;
-  text-align: center;
-  color: gray;
-  border: 1px solid gainsboro;
-}
-.food-items-cross {
-  width: 60px;
-  height: 25px;
-  color: white;
-  background-color: #ef4f5f;
-  padding: 8px;
-  border: none;
+.images1 {
+  width: 40rem;
 }
 
-.all-card-conatiner {
+.images1 > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.images2 {
+  width: 14rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-.card-component {
-  width: 328px;
-  height: auto;
-  padding: 10px 10px;
-
-  border-radius: 20px;
-
-  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
-}
-.images {
-  width: 328px;
-  height: 12rem;
-
-  border-radius: 20px;
+  flex-direction: column;
+  row-gap: 8px;
 }
 
-.card-description {
-  width: 328px;
-}
-.restanrentname {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-}
-.restanrentname div {
-  font-size: larger;
-}
-.restanrentname .ratting {
-  color: gray;
-  font-size: medium;
+.images2-image1 {
+  height: 10rem;
 }
 
-.fooditems {
+.images2-image1 > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.images2-image2 {
+  height: 10rem;
+}
+
+.images2-image2 > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.images3 {
+  width: 14rem;
+}
+
+.images3 > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.description-container {
+  width: 82%;
+  height: 30vh;
   display: flex;
   justify-content: space-between;
-  color: gray;
-  font-size: small;
+}
+
+.direction-bookmark-share{
+    display:flex;
+    gap: 10px;
+}
+
+.direction-bookmark-share > NavLink{
+padding:0 20px;
+background-color: white;
+height: 35px;
+color :black;
+border-radius: 10px;
+font-size: medium;
+border:1px solid gray;
 }

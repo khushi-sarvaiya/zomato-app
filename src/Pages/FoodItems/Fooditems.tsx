@@ -1,89 +1,71 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./Fooditems.css";
-import Searchbar from "../../Components/Searchbar/Searchbar";
-import Header from "../../Components/Header/Header";
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink, useParams } from "react-router-dom";
+import Secondheader from "../../Components/Secondheader/Secondheader";
 import { fooditems_request } from "../../Store/FoodItems/Action";
 
-const Fooditems = () => {
-  const [filter, setFilter] = useState("All");
-  const dispetch = useDispatch();
-  let foodItemsAll = useSelector(
-    (state: any) => state.foodItemsReducer.fooddata
+const Fooditems: React.FC = () => {
+  const { id } = useParams<{ id: any }>();
+  const dispatch = useDispatch();
+  const selector = useSelector((state: any) => state.foodItemsReducer.fooddata);
+  const filterdata = selector.filter(
+    (items: any, index: any) => items.id === parseInt(id)
   );
 
   useEffect(() => {
-    dispetch(fooditems_request());
-  }, [dispetch]);
-
-  const filtering = () => {
-    if (filter === "Rating") {
-      foodItemsAll.sort((a: any, b: any) => b.rating - a.rating);
-    } else if (filter === "Veg") {
-      foodItemsAll = foodItemsAll.filter(
-        (items: any) => items.foodType === "Veg"
-      );
-    } else {
-      return foodItemsAll;
-    }
-  };
-
-  const foodItemsAll1 = filtering();
+    dispatch(fooditems_request());
+  }, [dispatch]);
 
   return (
-    <div className="center-conainer">
-      <div className="header-component">
-        <div>
-          <img
-            src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
-            width={126}
-            height={27}
-          ></img>
-        </div>
-        <div className="searchbar-component">
-          <Searchbar />
-        </div>
-        <div className="margin-leftheader">
-          <Header />
-        </div>
-      </div>
-      <br/>
-     
-      
-      <div className="food-allfilter-container">
-        <div onClick={() => setFilter("All")}>All</div>
-        <div className="food-items-cross">
-          <div>Pizza X</div>
-        </div>
-        <div onClick={() => setFilter("Rating")}>rating</div>
-        <div onClick={() => setFilter("Veg")}>veg</div>
-        
-      </div>
-      <div className="location-description">Food Delivery Restaurants in Ahmedabad Jn, Kalupur Railway Station Rd, Sakar Bazzar</div>
-      <br/>
-      <div className="all-card-conatiner">
-        {foodItemsAll.map((items: any) => (
-          <div className="card-component ">
-            <div className="card " style={{ width: "18rem" }}>
-              <img
-                src={items.image}
-                className="card-img-top images"
-                alt="..."
-              />
-              <div className="card-body card-description">
-                <div className="restanrentname">
-                  <div>{items.restaurantName}</div>
-                  <div className="ratting">{items.foodType}</div>
-                </div>
-                <div className="fooditems">
-                  <div>{items.categories.toString()}</div>
-                  <div>rating {items.rating}</div>
-                </div>
+    <div className="center-container">
+      <Secondheader />
+      <hr className="horizontal-line" />
+      {filterdata.map((items: any) => (
+        <div className="fooditems-container">
+          <div className="all-images-items">
+            <div className="images1">
+              <img src={items.image} className="image"></img>
+            </div>
+            <div className="images2">
+              <div className="images2-image1">
+                <img src={items.image2}></img>
+              </div>
+              <div className="images2-image2">
+                <img src={items.image3}></img>
+              </div>
+            </div>
+            <div className="images3">
+              <img src={items.image4}></img>
+            </div>
+          </div>
+          <div className="description-container">
+            <div>
+              <h1>{items.restaurantName}</h1>
+              <p>{items.foodType}</p>
+              <p>{items.categories.toString()}</p>
+
+              <p>open now</p>
+              <div className="direction-bookmark-share">
+                <NavLink
+                  to={`https://www.google.com/maps/dir/?api=1&destination=${items.location}`}
+                >
+                  Direction
+                </NavLink>
+                <NavLink to={""}>Bookmark</NavLink>
+                <NavLink to={""}>Share</NavLink>
+              </div>
+            </div>
+            <div>
+              <div>rating</div>
+              <div>
+                <p>3</p>
+                <p>dining rating</p>
               </div>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

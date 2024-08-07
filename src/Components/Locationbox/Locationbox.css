@@ -1,0 +1,34 @@
+.Location-component {
+  position: absolute;
+  background-color: white;
+  width: 18rem;
+  display: flex;
+  padding: 18px;
+  margin-top: 0.3rem;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
+}
+.current-location-icon {
+  color: tomato;
+  padding-top: 6px;
+}
+
+.margin-left-div {
+  margin-left: 1rem;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  column-gap: 30px;
+}
+.detect-current-location {
+  color: tomato;
+
+}
+.gps-class-style {
+  padding-top: 3px;
+  font-family: "Segoe UI";
+  color: gray;
+  font-size: small;
+}

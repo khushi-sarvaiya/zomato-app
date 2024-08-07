@@ -1,17 +1,16 @@
 .search-suggestion-container {
-  width: 533px;
-  height: 265px;
-  overflow-x: hidden;
+  position: absolute;
+  width: 455px;
+  max-height: 265px;
+  overflow-y: auto;
   background-color: white;
   border-radius: 10px;
-  margin-left: 16rem;
+  margin-left: 18rem;
   margin-top: 0.3rem;
   padding: 15px 0 15px 0;
-  border: 1px solid gray;
+  border:1px solid gainsboro;
 }
-/* .search-suggestion-container .suggestion-container:hover {
-  background-color: rgb(233, 240, 240);
-} */
+
 .suggestion-container {
   padding: 1px;
 }
@@ -26,12 +25,11 @@
 
 .food-images {
   border-radius: 10px;
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
 }
 .short-desc {
-  width: 441px;
-
+  width: 321px;
   margin-left: 15px;
 }
 
@@ -39,11 +37,12 @@
   color: gray;
 }
 .no-items-found {
-  color:red;
+  color: gray;
+  padding-left: 20px;
+}
 
-  padding: 0 0 0 16px;
-
-
- 
- 
+.dropdown {
+  color: gray;
+  width: 20px;
+  padding: 3px;
 }

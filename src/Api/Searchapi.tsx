@@ -1,14 +1,9 @@
-import React from "react";
+import React from 'react'
 import axios from "axios";
+import { searchurl } from "./Commomapi";
 
-const Searchapi = (params:any) => {
-  const respone= axios.post("http://192.168.1.22:5500/search", {params},
-    {
-      headers: {"content-Type": "application/json"},
-    }
-  );
-  console.log("respone",respone);
-  return respone
+const Searchapi = (search: any) => {
+  return axios.post(searchurl, { search });
 };
 
 export default Searchapi;
