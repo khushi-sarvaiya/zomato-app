@@ -5,7 +5,7 @@ import { NavLink, useParams } from "react-router-dom";
 import Secondheader from "../../Components/Secondheader/Secondheader";
 import { fooditems_request } from "../../Store/FoodItems/Action";
 
-const Fooditems = () => {
+const Fooditems: React.FC = () => {
   const { id } = useParams<{ id: any }>();
   const dispatch = useDispatch();
   const selector = useSelector((state: any) => state.foodItemsReducer.fooddata);

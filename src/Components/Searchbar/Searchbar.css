@@ -3,8 +3,9 @@
   background-color: white;
   border: 1px solid gainsboro;
   padding: 13px;
+  
   border-radius: 8px;
-  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);  
 }
 
 .text-location {

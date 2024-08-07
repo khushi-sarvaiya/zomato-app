@@ -1,8 +1,9 @@
+import React from 'react'
 import axios from "axios";
+import { searchurl } from "./Commomapi";
 
 const Searchapi = (search: any) => {
-  console.log("params", search);
-  return axios.post("http://192.168.1.32:5500/search", { search });
+  return axios.post(searchurl, { search });
 };
 
 export default Searchapi;

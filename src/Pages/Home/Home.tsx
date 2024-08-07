@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import Searchbar from "../../Components/Searchbar/Searchbar";
 
-const Home = () => {
+const Home:React.FC = () => {
   return (
     <div className="main-container">
       <div className="background">

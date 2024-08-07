@@ -5,7 +5,7 @@ import { fooditems_request } from "../../Store/FoodItems/Action";
 import { useNavigate } from "react-router-dom";
 import Secondheader from "../../Components/Secondheader/Secondheader";
 
-const Restaurant = () => {
+const Restaurant:React.FC = () => {
   const [filter, setFilter] = useState("All");
   const navigator = useNavigate();
   const dispatch = useDispatch();

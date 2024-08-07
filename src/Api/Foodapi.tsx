@@ -1,8 +1,9 @@
+import React from "react";
 import axios from "axios";
+import { restauranturl } from "./Commomapi";
 
 const Foodapi = () => {
-  const foodapi_data = axios.get("http://192.168.1.32:5500/restaurant");
-  console.log("foodapi_data", foodapi_data);
+  const foodapi_data = axios.get(restauranturl);
   return foodapi_data;
 };
 

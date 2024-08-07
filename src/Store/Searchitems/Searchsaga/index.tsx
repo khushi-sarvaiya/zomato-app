@@ -31,7 +31,6 @@ export function* searchDataSaga(action: any) {
   try {
     const response: typeOfResponse = yield call(Searchapi, action.payload);
     yield put(searchItemsSuccess(response.data));
-    console.log("searchItemsSuccess====>", response);
   } catch (error: any) {
     yield put(searchItemsFailure(error.meassge));
   }

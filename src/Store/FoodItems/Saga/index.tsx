@@ -6,7 +6,6 @@ import { FOODITEMS_REQUEST } from "../../Type";
 export function* fooditems_saga(action: any): any {
   try {
     const fooddata_response: any = yield call(Foodapi);
-    console.log("fooddata_response=====>", fooddata_response);
     yield put(fooditems_success(fooddata_response.data));
   } catch (error: any) {
     yield put(fooditems_failure(error.meassge));
